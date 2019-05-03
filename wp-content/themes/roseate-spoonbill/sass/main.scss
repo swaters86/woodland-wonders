@@ -1,0 +1,40 @@
+/**
+  Theme Name: Roseate Spoonbill
+  Description: Woodland Wonder's - Roseate Spoonbill Theme
+  Author: Steven Waters
+  Author Website: StevenWaters.com
+  Version: 1
+*/
+
+@charset "utf-8";
+
+// Brand Colors
+$color1: #304301;
+$color2: #456a00;
+$color3: #a0c321;
+$color4: #7b4425;
+
+// Bulma's global variables
+$primary: $color1;
+$secondary: $color2;
+$tertiary: $color3;
+
+// Import Bulma Components
+@import "../node_modules/bulma/sass/utilities/_all.sass";
+@import "../node_modules/bulma/sass/base/_all.sass";
+@import "../node_modules/bulma/sass/elements/button.sass";
+@import "../node_modules/bulma/sass/elements/container.sass";
+@import "../node_modules/bulma/sass/elements/form.sass";
+@import "../node_modules/bulma/sass/elements/icon.sass";
+@import "../node_modules/bulma/sass/elements/progress.sass";
+@import "../node_modules/bulma/sass/elements/title.sass";
+@import "../node_modules/bulma/sass/base/helpers.sass";
+
+html {
+    background: $secondary;
+}
+
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    color: $primary;
+}
