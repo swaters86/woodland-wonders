@@ -1,24 +1,34 @@
 <!DOCTYPE html>
 <html <?php language_attributes(); ?>>
-<head>
-<meta charset="<?php bloginfo( 'charset' ); ?>" />
-<meta name="viewport" content="width=device-width" />
-<?php wp_head(); ?>
-</head>
-<body <?php body_class(); ?>>
-<div id="wrapper" class="hfeed">
-<header id="header">
-<div id="branding">
-<div id="site-title">
-<?php if ( is_front_page() || is_home() || is_front_page() && is_home() ) { echo '<h1>'; } ?>
-<a href="<?php echo esc_url( home_url( '/' ) ); ?>" title="<?php echo esc_html( get_bloginfo( 'name' ) ); ?>" rel="home"><?php echo esc_html( get_bloginfo( 'name' ) ); ?></a>
-<?php if ( is_front_page() || is_home() || is_front_page() && is_home() ) { echo '</h1>'; } ?>
-</div>
-<div id="site-description"><?php bloginfo( 'description' ); ?></div>
-</div>
-<nav id="menu">
-<div id="search"><?php get_search_form(); ?></div>
-<?php wp_nav_menu( array( 'theme_location' => 'main-menu' ) ); ?>
-</nav>
-</header>
-<div id="container">
+    <head>
+        <meta charset="<?php bloginfo( 'charset' ); ?>" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <?php wp_head(); ?>
+    </head>
+    <body <?php body_class(); ?>>
+        <div class="wrapper">
+            <header class="site-header">
+                <div class="columns is-mobile">
+                    <div class="column has-text-centered-desktop has-text-centered-widescreen has-text-centered-fullhd">
+                       <img 
+                            class="image is-not-centered-mobile"
+                            src="http://www.woodlandwonders.org/wp-content/uploads/2015/01/logo-trans.png"
+                            alt="Woodland Wonders logo" 
+                        />
+                    </div>
+                    <div class="column is-hidden-tablet is-hidden-desktop is-hidden-widescreen is-hidden-fullhd">
+                        <button class="hamburger is-pulled-right" type="button">
+                            <span class="hamburger-box">
+                                <span class="hamburger-inner"></span>
+                            </span>
+                        </button>
+                    </div>
+                </div>
+            </header>
+            <nav id="menu">
+                    <div class="mobile-menu-container is-hidden-tablet is-hidden-desktop is-hidden-widescreen is-hidden-fullhd">
+                        <a href="#" class="delete is-large" title="close menu"></a>
+                    </div>
+                    <?php wp_nav_menu( array( 'theme_location' => 'main-menu' ) ); ?>
+            </nav>
+            <div id="container">
