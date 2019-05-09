@@ -1,10 +1,10 @@
 'use strict';
 
 (function () {
-    function displayMenu() {
+    document.getElementById('hambuger-menu-toggle').addEventListener('click', function() {
+        
         let menu = document.getElementById('menu');
-        menu.classList.toggle("hide");
-    }
-    let hamburgerBtn = document.querySelector('.wrapper .site-header button.hamburger');    
-    hamburgerBtn.addEventListener('click', displayMenu);
+        this.classList.toggle('collapsed-toggle-icon');
+        menu.classList.toggle('js-expand-menu');
+    });
 })();

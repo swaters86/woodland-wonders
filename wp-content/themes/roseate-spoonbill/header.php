@@ -17,7 +17,7 @@
                         />
                     </div>
                     <div class="column is-hidden-tablet is-hidden-desktop is-hidden-widescreen is-hidden-fullhd">
-                        <button class="hamburger is-pulled-right" type="button">
+                        <button id="hambuger-menu-toggle" class="hamburger is-pulled-right" type="button">
                             <span class="hamburger-box">
                                 <span class="hamburger-inner"></span>
                             </span>
@@ -25,10 +25,7 @@
                     </div>
                 </div>
             </header>
-            <nav id="menu">
-                    <div class="mobile-menu-container is-hidden-tablet is-hidden-desktop is-hidden-widescreen is-hidden-fullhd">
-                        <a href="#" class="delete is-large" title="close menu"></a>
-                    </div>
+            <nav id="menu" class="js-collaspe-menu">
                     <?php wp_nav_menu( array( 'theme_location' => 'main-menu' ) ); ?>
             </nav>
             <div id="container">
