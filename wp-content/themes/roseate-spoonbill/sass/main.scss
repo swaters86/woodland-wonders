@@ -58,6 +58,7 @@ body {
 .hamburger {
     border: 0;
     background: transparent;
+    outline-color: salmon;
 }
 
 .hamburger-box {
@@ -106,6 +107,7 @@ body {
 
 #menu .menu-main-container .menu .menu-item {
     display: inline-block;
+    margin-left: -4px;
     min-width: 150px;
     padding: 20px 10px;
     font-size: 1.2em;
@@ -141,7 +143,7 @@ body {
     }
     
     .js-expand-menu {
-        height: 350px;
+        height: 420px;
         transition: .55s 0.2s;
     }
 
